@@ -1,0 +1,7 @@
+create an artifict registry
+gcloud artifacts repositories create python-fastapi-sample --repository-format docker 
+--project musicuploadservice --location us-east4
+
+
+submit a build
+gcloud builds submit --config=cloudbuild.yaml --project {PROJECT_NAME}

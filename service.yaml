@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: python-fastapi-service
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-east4-docker.pkg.dev/musicuploadservice/python-fastapi-sample/python-fastapi:latest
+          env:
+          ports:
+            - containerPort: 4000
