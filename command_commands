@@ -5,3 +5,6 @@ gcloud artifacts repositories create python-fastapi-sample --repository-format d
 
 submit a build
 gcloud builds submit --config=cloudbuild.yaml --project {PROJECT_NAME}
+
+actIs service account command
+gcloud iam service-accounts add-iam-policy-binding [SERVICE_ACCOUNT] --member [MEMBER_EMAIL] --role roles/iam.serviceAccountUser
